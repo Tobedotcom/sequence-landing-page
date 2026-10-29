@@ -1,0 +1,74 @@
+.logo-cloud {
+  padding-block: 3rem;
+  overflow: hidden;
+}
+
+.logo-cloud__label {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.logo-cloud__viewport {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.logo-cloud__row {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 5rem;
+}
+
+.logo-cloud__row img {
+  width: 6rem;
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: opacity 0.15s ease;
+}
+
+.logo-cloud__row--top {
+  animation: marquee-left 30s linear infinite;
+}
+
+.logo-cloud__row--bottom {
+  animation: marquee-right 30s linear infinite;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
